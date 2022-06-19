@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('git pushed') {
+            steps {
+               git branch: 'main', url: 'https://github.com/ak0470/webhook.git'
+            }
+        }
+          
+        stage('mvn build') {
+            steps {
+               sh'ls'
+            }
+        }
+         
+          stage('deploy') {
+            steps {
+               sh'ls'
+               }
+        }
+      }
+
+    }
